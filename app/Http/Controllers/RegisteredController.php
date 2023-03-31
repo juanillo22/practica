@@ -24,7 +24,7 @@ class RegisteredController extends Controller
 
         session()->flash('status','Usuario registrado');
 
-        return redirect()->route('posts.index');
+        return redirect()->route('login')->with('status','Cuenta registrada con éxito');
         
         // $credentials = $request->validate([
         //     'name' => ['required'],
@@ -34,6 +34,7 @@ class RegisteredController extends Controller
         // if (Auth::attempt($credentials)){
 
         // }
+        
     }
 
 }

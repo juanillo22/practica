@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisteredController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,5 +24,9 @@ Route::get('/login',function(){
 return 'Login';
 })->name('login');
 
+Route::view('/login','login')->name('login');
+Route::post('/login', [LoginController::class, 'store']);
+
 Route::view('/register','registro')->name('registro');
 Route::post('/register', [RegisteredController::class, 'store']);
+
