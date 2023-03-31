@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,16 +17,14 @@ class RegisteredController extends Controller
             'pass' => ['required']
         ]);
 
-        $usuario = new Usuario;
+        $usuario = new User;
         $usuario->name = $request->input('name');
-        $usuario->pass = $request->input('pass');
+        $usuario->pass = bcrypt($request->input('pass'));
         $usuario->save();
-
 
         session()->flash('status','Usuario registrado');
 
         return redirect()->route('posts.index');
-        
         
         // $credentials = $request->validate([
         //     'name' => ['required'],
