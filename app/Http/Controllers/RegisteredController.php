@@ -26,14 +26,6 @@ class RegisteredController extends Controller
 
         return redirect()->route('login')->with('status','Cuenta registrada con éxito');
         
-        // $credentials = $request->validate([
-        //     'name' => ['required'],
-        //     'pass' => ['required']
-        // ]);
-        
-        // if (Auth::attempt($credentials)){
-
-        // }
         
     }
 

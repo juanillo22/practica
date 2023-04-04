@@ -26,7 +26,7 @@
         @enderror   
     </label>
     <br><br>
-    <label><input type="checkbox" name="remember" value="remember" id="remember"> Recuérdame</label><br>
+    <label><input type="checkbox" name="remember"> Recuérdame</label><br>
     <br><br>
     <button type="submit" style="margin-left:55px;">Entrar</button>  
     </form>
