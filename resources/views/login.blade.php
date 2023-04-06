@@ -19,7 +19,7 @@
     <label>
         Contraseña:
         <br>
-        <input  type="password" name="pass" type="text" value="{{old('pass')}}">
+        <input  type="password" name="password" type="text" value="{{old('password')}}">
         @error('pass')
         <br>
         <small style="color: red">{{$message}}</small>

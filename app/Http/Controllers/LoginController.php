@@ -15,17 +15,19 @@ class LoginController extends Controller
     {
         $credentials = $request->validate([
              'name' => ['required'],
-             'pass' => ['required']
+             'password' => ['required']
          ]);
          
-         if ( ! Auth::attempt($credentials, $request->boolean('remember')) ){
-            throw ValidationException::withMessages([
+         
+         if (! Auth::attempt($credentials, $request->boolean('remember'))){
+             throw ValidationException::withMessages([
                 'name' => __('auth.failed')
-            ]);
+             ]);
+         }else {
+            $request->session()->regenerate();
+            return redirect()->route('posts.index')->with('status','Logeado con éxito');
          }
 
-         $request->session()->regenerate();
-         return redirect()->intended();     
     }
 
 }

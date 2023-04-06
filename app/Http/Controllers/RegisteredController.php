@@ -13,13 +13,13 @@ class RegisteredController extends Controller
     public function store(Request $request){
 
         $request->validate([
-            'name' => ['required'],
-            'pass' => ['required']
+            'name' => ['required','unique:usuario'],
+            'password' => ['required']
         ]);
 
         $usuario = new User;
         $usuario->name = $request->input('name');
-        $usuario->pass = bcrypt($request->input('pass'));
+        $usuario->password = bcrypt($request->input('password'));
         $usuario->save();
 
         session()->flash('status','Usuario registrado');
