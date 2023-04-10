@@ -4,6 +4,7 @@
    
     <h1>Login</h1><br>
 
+    <div class="dLogin">
     <form  action="{{route('login')}}" method="POST">
         @csrf
         <label>
@@ -16,6 +17,7 @@
         @enderror
         <br><br>
     </label>
+
     <label>
         Contraseña:
         <br>
@@ -26,12 +28,16 @@
         @enderror   
     </label>
     <br><br>
+
     <label><input type="checkbox" name="remember" style="margin-left:30px;"> Recuérdame</label><br>
     <br><br>
-    <button type="submit" style="margin-left:65px;">Entrar</button>  
+
+    <button type="submit" style="margin-left:65px;">Entrar</button> 
+    <br><br><br><br>
+    <a style="margin-left:55px;"href="{{route('posts.index')}}">Regresar</a>
     </form>
 
-    <br><br><br>
-    <a href="{{route('posts.index')}}">Regresar</a>
-
+    
+    
+    </div>
 </x-layouts.app>

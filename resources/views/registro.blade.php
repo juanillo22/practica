@@ -4,10 +4,11 @@
    
     <h1>Registro</h1><br>
 
+    <div class="dReg">
     <form  action="{{route('registro')}}" method="POST">
         @csrf
         <label>
-        Name:
+        Nombre:
         <br>
         <input name="name" type="text" value="{{old('name')}}">
         @error('name')
@@ -48,12 +49,11 @@
         <small style="color: red">{{$message}}</small>
         @enderror   
         </label>
-        <br><br>
+        <br><br><br>
         
-        <button type="submit" style="margin-left:70px;">Enviar</button>  
-    </form>
-
-    <br><br><br>
-    <a href="{{route('posts.index')}}">Regresar</a>
+        <button type="submit" style="margin-left:70px;">Enviar</button> <br><br><br><br>
+        <a style="margin-left:62px;" href="{{route('posts.index')}}">Regresar</a>
+    </form>  
+    </div>
 
 </x-layouts.app>

@@ -18,7 +18,7 @@ class LoginController extends Controller
              'password' => ['required']
          ]);
          
-         if (! Auth::attempt($credentials)){
+         if (! Auth::attempt($credentials, $request->boolean('remember'))){
              throw ValidationException::withMessages([
                 'email' => __('auth.failed')
              ]);
@@ -26,8 +26,7 @@ class LoginController extends Controller
             
             $request->session()->regenerate();
             return redirect()->intended()->with('status','Logeado con éxito');
-         
-
+             
     }
 
     public function destroy(Request $request)

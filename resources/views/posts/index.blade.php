@@ -9,18 +9,20 @@
     @endauth
     <br>
      @foreach ( $posts as $post )
-     <div>
-        <h2><a href="/blog/{{$post->id}}">{{$post->title}}</a></h2> &nbsp; 
+     <div style="margin-top:15px;">
+        <h2 ><a href="/blog/{{$post->id}}">{{$post->title}}</a></h2> &nbsp; 
+        <div class="posts">
         @auth
-        <a class="editar" href="{{route('posts.edit',$post)}}">(Editar)</a>
+        <a style=""class="editar" href="{{route('posts.edit',$post)}}">(Editar)</a>
         <br>
         <form action="{{route('posts.destroy', $post)}}" method="POST">
             @csrf
             @method('DELETE')
             &nbsp; &nbsp;<button type='submit' class="btnEli">Eliminar</button>
         </form>
+        </div>
         <br>
         @endauth
      </div>
-     @endforeach   
+     @endforeach 
 </x-layouts.app>

@@ -14,7 +14,7 @@ class PostController extends Controller
         $this->middleware('auth',['except'=>['index','show']]);
     }
 
-    
+
     public function index()
     {
         $posts = Post::all();
@@ -58,7 +58,7 @@ class PostController extends Controller
     {
         return view ('posts.edit',['post' => $post]);
     }
-
+    
 
     public function update(Request $request, Post $post)
     {
@@ -81,7 +81,6 @@ class PostController extends Controller
         return redirect()->route('posts.index')->with('status','Post eliminado');
 
     }
-
 
 }
 
