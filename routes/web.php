@@ -26,6 +26,7 @@ return 'Login';
 
 Route::view('/login','login')->name('login');
 Route::post('/login', [LoginController::class, 'store']);
+Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
 Route::view('/register','registro')->name('registro');
 Route::post('/register', [RegisteredController::class, 'store']);

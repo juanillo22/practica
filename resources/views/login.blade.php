@@ -1,5 +1,5 @@
 <x-layouts.app 
-    title="Registro" 
+    title="Login" 
     meta-description="Registrometa description">
    
     <h1>Login</h1><br>
@@ -7,10 +7,10 @@
     <form  action="{{route('login')}}" method="POST">
         @csrf
         <label>
-        Usuario:
+        Correo:
         <br>
-        <input name="name" type="text" value="{{old('name')}}">
-        @error('name')
+        <input name="email" type="email" value="{{old('email')}}">
+        @error('email')
         <br>
         <small style="color: red">{{$message}}</small>
         @enderror
@@ -26,9 +26,9 @@
         @enderror   
     </label>
     <br><br>
-    <label><input type="checkbox" name="remember"> Recuérdame</label><br>
+    <label><input type="checkbox" name="remember" style="margin-left:30px;"> Recuérdame</label><br>
     <br><br>
-    <button type="submit" style="margin-left:55px;">Entrar</button>  
+    <button type="submit" style="margin-left:65px;">Entrar</button>  
     </form>
 
     <br><br><br>

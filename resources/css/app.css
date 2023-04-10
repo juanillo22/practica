@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    background: rgb(61, 133, 179);
+    background: linear-gradient(90deg, rgba(61,133,179,1) 0%, rgba(61,99,179,1) 50%, rgba(31,54,89,1) 100%);
+}
+
+nav li {
+    padding: 20px;
+    list-style:none;
+}
+nav li:hover {
+    padding: 20px;
+    list-style:none;
+    background: rgb(24, 111, 165);
+}
+
+nav li a {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}

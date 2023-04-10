@@ -6,7 +6,6 @@
         <li><a href="{{route('about')}}">About</a></li>
         <li><a href="{{route('contact')}}">Contacto</a></li>
         
-        
         @auth
         <form action="{{route('logout')}}" method="POST">
         @csrf

@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    background: rgb(61, 133, 179);
+    background: linear-gradient(90deg, rgba(61,133,179,1) 0%, rgba(61,99,179,1) 50%, rgba(31,54,89,1) 100%);
+}
+
+nav li {
+    padding: 20px;
+    list-style:none;
+}
+nav li:hover {
+    background: rgb(24, 111, 165);
+}
+
+nav li a {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+h1 {
+    margin-left: 10px;
+}
+h2, h3, label, input {
+    margin-left: 8px;
+}
+
+.login {
+    margin-left: 600px;
+}
+
+.logout{
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.status {
+    background-color: rgb(196, 1, 1);
+    color: white;
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 22px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    color:white;
+}
+
+.editar {
+    color:rgb(0, 0, 0);
+}
+
+.btnEli {
+    background-color: rgb(240, 239, 239)
+}

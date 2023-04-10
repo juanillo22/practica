@@ -14,20 +14,28 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         $credentials = $request->validate([
-             'name' => ['required'],
+             'email' => ['required'],
              'password' => ['required']
          ]);
          
-         
-         if (! Auth::attempt($credentials, $request->boolean('remember'))){
+         if (! Auth::attempt($credentials)){
              throw ValidationException::withMessages([
-                'name' => __('auth.failed')
+                'email' => __('auth.failed')
              ]);
-         }else {
-            $request->session()->regenerate();
-            return redirect()->route('posts.index')->with('status','Logeado con éxito');
          }
+            
+            $request->session()->regenerate();
+            return redirect()->intended()->with('status','Logeado con éxito');
+         
 
+    }
+
+    public function destroy(Request $request)
+    {
+        Auth::guard('web')->logout();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('home')->with('status','Sesion cerrada con éxito');
     }
 
 }

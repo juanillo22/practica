@@ -7,7 +7,7 @@
     <form  action="{{route('registro')}}" method="POST">
         @csrf
         <label>
-        Usuario:
+        Name:
         <br>
         <input name="name" type="text" value="{{old('name')}}">
         @error('name')
@@ -15,20 +15,42 @@
         <small style="color: red">{{$message}}</small>
         @enderror
         <br><br>
-    </label>
-    <label>
+        </label>
+
+        <label>
+        Email:
+        <br>
+        <input name="email" type="email" value="{{old('email')}}">
+        @error('email')
+        <br>
+        <small style="color: red">{{$message}}</small>
+        @enderror
+        <br><br>
+        </label>
+
+        <label>
         Contraseña:
         <br>
         <input  type="password" name="password" type="text" value="{{old('password')}}">
-        @error('pass')
+        @error('password')
         <br>
         <small style="color: red">{{$message}}</small>
         @enderror   
-    </label>
-    <br><br>
-    {{-- <label><input type="checkbox" id="record" value="first_checkbox"> Recordar</label><br>
-    <br><br> --}}
-    <button type="submit" style="margin-left:55px;">Enviar</button>  
+        </label>
+
+        <br><br>
+        <label>
+        Confirmar contraseña:
+        <br>
+        <input  type="password" name="password_confirmation" type="text" value="{{old('password_confirmation')}}">
+        @error('password_confirmation')
+        <br>
+        <small style="color: red">{{$message}}</small>
+        @enderror   
+        </label>
+        <br><br>
+        
+        <button type="submit" style="margin-left:70px;">Enviar</button>  
     </form>
 
     <br><br><br>

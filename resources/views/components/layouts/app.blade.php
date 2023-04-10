@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test - {{$title ?? ''}}</title>
     <meta name="description" content="{{$metaDescription ?? 'Default meta description'}}"/>
+    <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
+    <x-layouts.navigation />
     @if (session('status'))
-       <div>
+       <div class="status">
             {{session('status')}}
        </div>
    @endif
+   <br>
     {{ $slot }}
     <br>
-    <x-layouts.navigation />
+    
 </body>
 </html>
