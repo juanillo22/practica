@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="css/app.css" />
 <x-layouts.app
-    title="Blog" 
+    title="Blog"
     meta-description="Blog meta description"> 
     <h1>Blog</h1>
     <br><br>
@@ -9,16 +8,16 @@
     @endauth
     <br>
      @foreach ( $posts as $post )
-     <div style="margin-top:15px;">
-        <h2 ><a href="/blog/{{$post->id}}">{{$post->title}}</a></h2> &nbsp; 
-        <div class="posts">
+     <div style="margin-top:10px;">
+        <h2><a class="posts" href="/blog/{{$post->id}}">{{$post->title}}</a></h2> &nbsp; 
+        <div class="divEdEl">
         @auth
-        <a style=""class="editar" href="{{route('posts.edit',$post)}}">(Editar)</a>
+        <button type='submit' class="btnEli" style="padding:3px;"><a  href="{{route('posts.edit',$post)}}">Editar</a></button>
         <br>
         <form action="{{route('posts.destroy', $post)}}" method="POST">
             @csrf
             @method('DELETE')
-            &nbsp; &nbsp;<button type='submit' class="btnEli">Eliminar</button>
+            &nbsp; &nbsp;<button type='submit' class="btnEli" style="padding:3px;">Eliminar</button>
         </form>
         </div>
         <br>

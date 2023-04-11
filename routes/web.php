@@ -6,7 +6,6 @@ use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 
-
 Route::view('/','welcome')->name('home');
 Route::view('/contacto','contact')->name('contact');
 

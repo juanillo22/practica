@@ -1,6 +1,6 @@
 <label>
-        Título
-        <br><br>
+        <br>
+        <h2>Título:<h2>
         <input name="title" type="text" value="{{old('title', $post->title)}}">
         @error('title')
         <br>
@@ -8,5 +8,5 @@
         @enderror
 </label>
 <br><br>
-<button type="submit">Enviar</button>
+<button class="btnPosts" type="submit">Guardar</button>
 <br><br>

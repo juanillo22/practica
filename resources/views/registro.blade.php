@@ -1,9 +1,9 @@
 <x-layouts.app 
     title="Registro" 
     meta-description="Registrometa description">
-   
+    
     <h1>Registro</h1><br>
-
+    
     <div class="dReg">
     <form  action="{{route('registro')}}" method="POST">
         @csrf
@@ -32,7 +32,7 @@
         <label>
         Contraseña:
         <br>
-        <input  type="password" name="password" type="text" value="{{old('password')}}">
+        <input  type="password" name="password" type="text">
         @error('password')
         <br>
         <small style="color: red">{{$message}}</small>
@@ -43,17 +43,16 @@
         <label>
         Confirmar contraseña:
         <br>
-        <input  type="password" name="password_confirmation" type="text" value="{{old('password_confirmation')}}">
+        <input  type="password" name="password_confirmation" type="text">
         @error('password_confirmation')
         <br>
         <small style="color: red">{{$message}}</small>
         @enderror   
         </label>
-        <br><br><br>
+        <br><br><br><br>
         
-        <button type="submit" style="margin-left:70px;">Enviar</button> <br><br><br><br>
-        <a style="margin-left:62px;" href="{{route('posts.index')}}">Regresar</a>
+        <button class="btnReg" type="submit" style="margin-left:20px;">Registrarse</button> <br><br><br><br>
+        <a style="margin-left:60px;" href="{{route('posts.index')}}">Regresar</a>
     </form>  
     </div>
-
 </x-layouts.app>

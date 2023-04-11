@@ -47,7 +47,6 @@ class PostController extends Controller
         $post->title = $request->input('title');
         $post->save();
 
-
         session()->flash('status','Post creado');
 
         return redirect()->route('posts.index');

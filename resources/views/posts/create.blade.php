@@ -1,7 +1,6 @@
-<x-layouts.app
-
+<x-layouts.app 
     title="Crear nuevo post" 
-    >
+    meta-description="Crear meta description">
 
 <h1>Crear nuevo post</h1>
 <form  action="{{route('posts.store')}}" method="POST">

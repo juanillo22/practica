@@ -4,7 +4,7 @@
 
 <h1>Formulario de edición</h1>
 <form  action="{{route('posts.update', $post)}}" method="POST">
-    @csrf @method('PATCH')
+    @csrf @method('PATCH')   
     
     @include('posts.form')
     

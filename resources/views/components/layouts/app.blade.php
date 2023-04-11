@@ -18,6 +18,5 @@
    <br>
     {{ $slot }}
     <br>
-    
 </body>
 </html>

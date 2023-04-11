@@ -32,12 +32,9 @@
     <label><input type="checkbox" name="remember" style="margin-left:30px;"> Recuérdame</label><br>
     <br><br>
 
-    <button type="submit" style="margin-left:65px;">Entrar</button> 
+    <button class="btnLog" type="submit" style="margin-left:35px;">Entrar</button> 
     <br><br><br><br>
-    <a style="margin-left:55px;"href="{{route('posts.index')}}">Regresar</a>
+    <a style="margin-left:52px;"href="{{route('posts.index')}}">Regresar</a>
     </form>
-
-    
-    
     </div>
 </x-layouts.app>

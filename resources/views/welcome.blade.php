@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="css/app.css" />
 <x-layouts.app 
     title="Home" 
     meta-description="Home meta description">
