@@ -3,12 +3,26 @@
     padding: 0;
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input {
+    background-color: rgb(234, 237, 255);
+}
+
+.editar {
+    margin-top: 10px;
+  }
+
+
+/*Barra para menu superior*/
 nav {
     display: flex;
     background: rgb(61, 133, 179);
     background: linear-gradient(90deg, rgba(61,133,179,1) 0%, rgba(61,99,179,1) 50%, rgba(31,54,89,1) 100%);
 }
-
 nav li {
     padding: 20px;
     list-style:none;
@@ -16,66 +30,111 @@ nav li {
 nav li:hover {
     background: rgb(24, 111, 165);
 }
-
 nav li a {
     text-decoration: none;
     color:white;
     font-weight: bold;
 }
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
+/*Botones del menu que cambian de visibilidad segun autentificacion (login, registrarse, logout, nombre usuario)*/
+.btnInv1 {
+    position: fixed;
+    right: 120px;
 }
-
-h2, h3, label, input {
-    margin-left: 8px;
+.btnInv2 {
+    position: fixed;
+    right: 0px;
 }
-
-.login {
-    margin-left: 600px;
+.btnReg1 {
+    position: fixed;
+    right: 0px;
 }
-
-.logout{
-    color: white;
-    text-decoration: none;
+.btnReg2 {
+    position: fixed;
+    right: 120px;
     margin-top: 20px;
+    color: white;
 }
 
+
+/*Estilo de la barra de status*/
 .status {
     background-color: rgb(196, 1, 1);
     color: white;
     font-weight: bold;
-}
-
-.btn {
-    margin-top: 22px;
-    font-weight: bold;
-    background-color: transparent;
-    border: none;
-    color:white;
-}
-
-.editar {
-    color:rgb(0, 0, 0);
-}
-
-.btnEli {
-    background-color: rgb(240, 239, 239);
-}
-
-input {
-    background-color: rgb(234, 237, 255);
-}
-
-.posts {
-    display: flex;
-    margin-left: 8px;
+    padding: 4px;
     
 }
 
+
+/*Estilo posts*/
+.posts {
+    margin-left: 8px;
+}
+/*Botones editar y eliminar posts*/
+.divEdEl {
+display: flex;
+}
+.editar {
+    color:rgb(0, 0, 0);
+    margin-left: 17px;
+}
+.btnEli {
+    background-color: rgb(240, 239, 239);
+}
+.h2posts {
+    margin-top: 15px;
+}
+
+
+/* Centrar el formulario de Login y Registro*/
 .dLogin, .dReg {
     display: flex;
     justify-content: center;
 }
+
+
+/*Estilo botones*/
+.btnLog, .btnReg, .btnEli {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 0.7em 1.5em;
+    color: #000000;
+  }
+.btnLog:hover, .btnLog:focus, .btnReg:hover, .btnReg:focus, .btnEli:hover, .btnEli:focus  {
+  box-shadow: 0 0.5em 0.5em -0.4em rgb(0, 0, 0);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+
+/*Subrayado gradient de los posts*/
+.posts {
+    color:black;
+    text-decoration: none;
+  }
+  .posts {
+    background:
+      linear-gradient(
+        to right,
+        rgb(0, 0, 0),
+        rgb(0, 0, 0)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgb(2, 113, 224)
+    );
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+  .posts:hover {
+    background-size: 0 2px, 100% 2px;
+  }
+
 
