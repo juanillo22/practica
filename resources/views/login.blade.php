@@ -2,7 +2,7 @@
     title="Login" 
     meta-description="Registrometa description">
    
-    <h1>Login</h1><br>
+    <br><h1>Login</h1><br>
 
     <div class="dLogin">
     <form  action="{{route('login')}}" method="POST">

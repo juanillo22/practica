@@ -114,8 +114,8 @@ display: flex;
 .posts {
     color:black;
     text-decoration: none;
-  }
-  .posts {
+} 
+.posts {
     background:
       linear-gradient(
         to right,
@@ -132,9 +132,8 @@ display: flex;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
-  }
-  .posts:hover {
+}
+.posts:hover {
     background-size: 0 2px, 100% 2px;
-  }
-
+}
 

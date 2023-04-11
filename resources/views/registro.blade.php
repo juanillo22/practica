@@ -2,7 +2,7 @@
     title="Registro" 
     meta-description="Registrometa description">
     
-    <h1>Registro</h1><br>
+    <br><h1>Registro</h1><br>
     
     <div class="dReg">
     <form  action="{{route('registro')}}" method="POST">

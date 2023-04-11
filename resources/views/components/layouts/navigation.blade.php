@@ -13,7 +13,7 @@
         </form>
          <div class="btnReg2">Bienvenido {{Auth::user()->name}}</div>
         @endauth
-        
+
         @guest
         <div class="btnInv1"><li><a href="{{route('login')}}">Login</a></li></div>
         <div class="btnInv2"><li><a href="{{route('registro')}}">Registrarse</a></li>
